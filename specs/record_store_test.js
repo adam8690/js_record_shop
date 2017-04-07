@@ -16,4 +16,8 @@ describe('record store', function(){
     recordStore = new RecordStore("1up", "Aberdeen");
     assert.deepEqual([], recordStore.inventory)
     })
+  it('should start with zero balance', function(){
+    recordStore = new RecordStore("1up", "Aberdeen");
+    assert.deepEqual(0, recordStore.balance)
+    })
 })
