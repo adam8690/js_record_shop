@@ -25,11 +25,12 @@ describe('record store', function(){
   it('should be able to add records to store inventory', function(){
     recordStore.addRecord(record1);
     recordStore.addRecord(record1);
-    assert.strictEqual(2, recordStore.inventory[record1])
+    assert.strictEqual(2, recordStore.inventory.get(record1))
   })
 
   it('should be able to print a list of its inventory', function(){
     // recordStore.addRecord(record1);
+
     assert.strictEqual('China Girl, David Bowie: 2', recordStore.printInventory())
   })
 
